@@ -108,3 +108,8 @@ $.ajax({
 	};
  
 })(jQuery);
+// 在插件初始化前添加清理代码
+$(document).ready(function() {
+  $('#contactable').remove(); // 完全移除插件容器
+  $('#overlay').remove();     // 清除可能遗留的覆盖层
+});
